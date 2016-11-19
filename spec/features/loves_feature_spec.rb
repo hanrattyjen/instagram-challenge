@@ -6,8 +6,7 @@ feature 'loves' do
 
   scenario 'allow users to "love" images' do
     visit '/images'
-    click_button 'Love'
-    expect(current_path).to eq '/images'
-    expect(page).to have content 'Loves: 1'
+    click_link 'Love'
+    expect(page).to have_content 'Your LOVE has been registered!'
   end
 end
